@@ -1,8 +1,22 @@
 {
-  "name": "Android Dev Container", // 添加名称
-  "image": "mcr.microsoft.com/vscode/devcontainers/android:latest", // 使用 Android 镜像
-  "features": {
-    "android": "latest",
-    "java": "latest"
-  } // 合并 features 部分
+    "name": "Android Development",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "settings": {
+        "java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "vscjava.vscode-spring-initializr",
+        "ms-azuretools.vscode-docker",
+        "ms-dotnettools.csharp",
+        "redhat.java"
+    ],
+    "forwardPorts": [],
+    "postCreateCommand": "sdkmanager --licenses && ./gradlew build",
+    "remoteUser": "vscode"
 }
