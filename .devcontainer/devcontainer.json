@@ -1,7 +1,0 @@
-{
-  "name": "Android",
-  "image": "mcr.microsoft.com/vscode/devcontainers/android:latest", // 或指定特定版本，例如 "android:api-33"
-  "features": {
-    "android": "latest" // 或指定特定版本，例如 "29" 或 "api-33"
-  }
-}
