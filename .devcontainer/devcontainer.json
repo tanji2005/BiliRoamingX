@@ -1,0 +1,8 @@
+{
+  "name": "Android Dev Container", // 添加名称
+  "image": "mcr.microsoft.com/vscode/devcontainers/android:latest", // 使用 Android 镜像
+  "features": {
+    "android": "latest",
+    "java": "latest"
+  } // 合并 features 部分
+}
