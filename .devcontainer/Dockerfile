@@ -1,5 +1,5 @@
 # 使用官方的 OpenJDK 11 镜像作为基础
-FROM openjdk:11-jdk
+FROM openjdk:17-jdk
 
 # 设置环境变量
 ENV ANDROID_SDK_ROOT=/opt/android-sdk
