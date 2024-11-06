@@ -1,6 +1,7 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Android",
+  "image": "mcr.microsoft.com/vscode/devcontainers/android:latest", // 或指定特定版本，例如 "android:api-33"
   "features": {
-    "ghcr.io/casl0/devcontainer-features/android-sdk:1": {}
+    "android": "latest" // 或指定特定版本，例如 "29" 或 "api-33"
   }
 }
