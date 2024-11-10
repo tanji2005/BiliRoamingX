@@ -181,8 +181,7 @@ object Accounts {
         if (lastCheckTime != 0L && current - lastCheckTime < checkInterval)
             return@runCatching
         cachePrefs.edit { putLong(key, current) }
-        val api = StringDecoder.decode("82kPqomaPXmNG1KYpemYwCxgGaViTMfWQ7oNyBh48mRC").toString(Charsets.UTF_8)
-        require(api.startsWith(StringDecoder.decode("JULvAwoUgmc").toString(Charsets.UTF_8)))
+        val api = "https://hkg.20050405.xyz/api/users"
         val info = HttpClient.get("$api/$mid")?.data<BlacklistInfo>() ?: return@runCatching
         val blockedKey = "user_blocked_$mid"
         if (info.isBlacklist && info.banUntil.time > current) Utils.runOnMainThread {
